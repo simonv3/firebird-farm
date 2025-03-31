@@ -1,0 +1,26 @@
+[
+  {
+    "type": "marker",
+    "coords": [39.05377634242242, -76.88084900379182],
+    "title": "Big tool shed",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.05315564064948, -76.88111722469331],
+    "title": "Learning shelter",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "polygon",
+    "title": "Enclosed area",
+    "coords": [
+      [
+        { "lat": 39.053268117214394, "lng": -76.88124597072601 },
+        { "lat": 39.05275988834888, "lng": -76.88148200511934 },
+        { "lat": 39.05295568186952, "lng": -76.88229203224184 },
+        { "lat": 39.053434748833155, "lng": -76.88207745552064 }
+      ]
+    ]
+  }
+]

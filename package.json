@@ -1,0 +1,25 @@
+{
+  "name": "leaflet-web-app",
+  "version": "1.0.0",
+  "description": "A web application using Leaflet to outline specific locations on a plot of land.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'No tests defined'"
+  },
+  "keywords": [
+    "leaflet",
+    "map",
+    "web",
+    "application"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
