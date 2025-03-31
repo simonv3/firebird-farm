@@ -9,7 +9,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const load = async () => {
-  const response = await fetch("../data/locations.json");
+  const response = await fetch("./data/locations.json");
   const shapes = await response.json();
 
   // Function to draw shapes on the map
