@@ -1,19 +1,27 @@
-const map = L.map("map", { minZoom: 18, maxZoom: 18 }).setView(
+const map = L.map("map", { minZoom: 19 }).setView(
   [39.0541714, -76.8821369],
-  15
+  17
 ); // Set initial view to San Francisco
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution: "© OpenStreetMap",
-}).addTo(map);
+L.tileLayer(
+  "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  {
+    maxZoom: 19,
+    minZoom: 17,
+    attribution:
+      "©" +
+      '<a href="http://www.esri.com/">Esri</a>' +
+      "i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+    ext: "jpg",
+  }
+).addTo(map);
 
 const load = async () => {
   const response = await fetch("./data/locations.json");
   const shapes = await response.json();
 
   // Function to draw shapes on the map
-  shapes.forEach((shape) => {
+  shapes.forEach((shape, index) => {
     let layer;
 
     if (shape.type === "polygon") {
@@ -21,7 +29,16 @@ const load = async () => {
     } else if (shape.type === "circle") {
       layer = L.circle(shape.coords, { radius: shape.radius }).addTo(map);
     } else if (shape.type === "marker") {
-      layer = L.marker(shape.coords).addTo(map);
+      // Create a custom div icon with a number
+      const numberIcon = L.divIcon({
+        className: "number-icon",
+        html: `<div style="background-color: #007bff; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px;">${
+          shape.number || index + 1
+        }</div>`,
+        iconSize: [30, 30],
+      });
+
+      layer = L.marker(shape.coords, { icon: numberIcon }).addTo(map);
     }
 
     if (layer) {
@@ -70,29 +87,3 @@ const load = async () => {
 };
 
 load();
-// JSON array of shapes with coordinates and associated images
-// const shapes = [
-//   {
-//     type: "polygon",
-//     coords: [
-//       [37.7749, -122.4194],
-//       [37.775, -122.4184],
-//       [37.7745, -122.4175],
-//     ],
-//     title: "Polygon 1",
-//     image: "images/polygon1.jpg",
-//   },
-//   {
-//     type: "circle",
-//     coords: [39.0541714, -76.8821369],
-//     radius: 100,
-//     title: "Circle 1",
-//     image: "images/circle1.jpg",
-//   },
-//   {
-//     type: "marker",
-//     coords: [37.776, -122.421],
-//     title: "Marker 1",
-//     image: "images/marker1.jpg",
-//   },
-// ];

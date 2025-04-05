@@ -1,14 +1,166 @@
 [
   {
     "type": "marker",
-    "coords": [39.05377634242242, -76.88084900379182],
-    "title": "Big tool shed",
+    "coords": [39.054182503381234, -76.88260316848756],
+    "title": "Front administrative building",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.054292895443226, -76.88238322734834],
+    "title": "Seeding Greenhouse",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.05401170777547, -76.88200503587724],
+    "title": "Nursing Greenhouse",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.05264324514238, -76.88087046146394],
+    "title": "Back administrative building",
     "image": "images/marker1.jpg"
   },
   {
     "type": "marker",
     "coords": [39.05315564064948, -76.88111722469331],
-    "title": "Learning shelter",
+    "title": "Outdoor pavilion",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05425748668741, -76.88205868005753],
+    "title": "Greenhouse",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.054403287332654, -76.88202649354935],
+    "title": "Greenhouse 1",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.054601159155375, -76.88196748495103],
+    "title": "Greenhouse 2",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.054749041945065, -76.88193261623383],
+    "title": "Greenhouse 3",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.053107733910025, -76.880704164505],
+    "title": "Greenhouse 4",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05422832652225, -76.88171267509462],
+    "title": "Hydroponics house",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.05410960286834, -76.88174217939378],
+    "title": "Research hydropoonics",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05350348426133, -76.88060492277147],
+    "title": "Aquaculture house",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.05401795640248, -76.88220888376237],
+    "title": "Aquaponics house",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.052982759654114, -76.8805566430092],
+    "title": "Small aquaponics house",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05393880708627, -76.88188701868059],
+    "title": "Small hydroponics building",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05298900837219, -76.88076317310335],
+    "title": "DWC hydroponics building",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "polygon",
+    "coords": [
+      [
+        { "lat": 39.05413251446621, "lng": -76.88129961490633 },
+        { "lat": 39.054038785155164, "lng": -76.88093751668931 },
+        { "lat": 39.05350765004272, "lng": -76.88116282224655 },
+        { "lat": 39.05359304850679, "lng": -76.88150078058244 }
+      ]
+    ],
+    "title": "Triple yield project",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.05377634242242, -76.88084900379182],
+    "title": "Barn",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.0538825693603, -76.88082218170167],
+    "title": "Water quality lab",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05283903898644, -76.88064515590669],
+    "title": "Test kitchens",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.053859657681336, -76.8816938996315],
+    "title": "Glass greenhouse",
+    "image": "images/marker1.jpg"
+  },
+
+  {
+    "type": "marker",
+    "coords": [39.05444911033039, -76.88235372304918],
+    "title": "Greenhouse",
+    "image": "images/marker1.jpg"
+  },
+  {
+    "type": "marker",
+    "coords": [39.052909857902705, -76.88085168600084],
+    "title": "Cool cube storage",
     "image": "images/marker1.jpg"
   },
   {
@@ -16,10 +168,10 @@
     "title": "Enclosed area",
     "coords": [
       [
-        { "lat": 39.053268117214394, "lng": -76.88124597072601 },
-        { "lat": 39.05275988834888, "lng": -76.88148200511934 },
-        { "lat": 39.05295568186952, "lng": -76.88229203224184 },
-        { "lat": 39.053434748833155, "lng": -76.88207745552064 }
+        { "lat": 39.053486821133376, "lng": -76.8821042776108 },
+        { "lat": 39.05330560936291, "lng": -76.88132107257844 },
+        { "lat": 39.05291194081095, "lng": -76.88148736953737 },
+        { "lat": 39.05311189971475, "lng": -76.88231885433197 }
       ]
     ]
   }
