@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/firebird-farm/",
   build: {
-    outDir: "docs",
+    outDir: "dist",
   },
 });
