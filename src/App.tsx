@@ -1,67 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Polygon } from "react-leaflet";
+import { MapContainer, TileLayer, Polygon } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css";
-import * as L from "leaflet";
 import { css } from "@emotion/css";
+import Content from "./Content";
+import OurMarker from "./OurMarker";
 
 const AIRTABLE_TOKEN =
   "patzhOJ8RPc16jjLW.6de0b728c2258e0f12634c8cef8fb919106d61357e934e1fd391b32170a278fe";
 const BASE_ID = "appsG0MMwAvSWLYMq";
-
-type Coords = { lat: number; lng: number }[][];
-
-type Polygon = {
-  type: "polygon";
-  coords: Coords;
-  title: string;
-  number?: number;
-  description: string;
-  images?: string[];
-};
-
-type Marker = {
-  type: "marker";
-  coords: number[];
-  title: string;
-  number?: number;
-  description: string;
-  images?: string[];
-};
-
-type Shape = Marker | Polygon;
-
-const OurMarker: React.FC<{
-  position: { lat: number; lng: number };
-  number?: number;
-  title: string;
-  description: string;
-  images?: string[];
-}> = ({ position, number, title, description, images }) => {
-  return (
-    <Marker
-      position={[position.lat, position.lng]}
-      icon={L.divIcon({
-        className: "number-icon",
-        html: `<div style="background-color: #007bff; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px;">${number}</div>`,
-        iconSize: [30, 30],
-      })}
-    >
-      <Popup>
-        <b>{title}</b>
-        <div>{description}</div>
-        {images?.map((image, i) => (
-          <img
-            key={i}
-            src={image}
-            alt={title}
-            style={{ width: "100px", height: "auto" }}
-          />
-        ))}
-      </Popup>
-    </Marker>
-  );
-};
 
 const App = () => {
   const [shapes, setShapes] = useState<Shape[]>([]);
@@ -110,7 +57,10 @@ const App = () => {
             title: string;
             number: number;
             description: string;
-            images: any[];
+            images: {
+              filename: string;
+              thumbnails: { large: { url: string }; small: { url: string } };
+            }[];
           };
         }) => ({
           type: record.fields.type,
@@ -142,9 +92,11 @@ const App = () => {
     >
       <MapContainer
         center={[39.0541714, -76.8821369]}
+        // maxZoom={19}
+        // minZoom={19}
         zoom={20}
         className={css`
-          height: 90vh;
+          height: 70vh;
           width: 100%;
         `}
       >
@@ -182,7 +134,7 @@ const App = () => {
           return null;
         })}
       </MapContainer>
-      Rest of site
+      <Content shapes={shapes} />
     </div>
   );
 };
