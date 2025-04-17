@@ -1,19 +1,19 @@
-import { Marker, Popup } from "react-leaflet";
+import { Marker } from "react-leaflet";
 
 import * as L from "leaflet";
-import styled from "@emotion/styled";
-import Lightbox from "./Lightbox";
+// import styled from "@emotion/styled";
+// import Lightbox from "./Lightbox";
 
-const StyledPop = styled(Popup)`
-  border-radius: 0;
-  .leaflet-popup-content-wrapper {
-    border-radius: 0;
-  }
+// const StyledPop = styled(Popup)`
+//   border-radius: 0;
+//   .leaflet-popup-content-wrapper {
+//     border-radius: 0;
+//   }
 
-  .leaflet-popup-tip-container {
-    visibility: hidden;
-  }
-`;
+//   .leaflet-popup-tip-container {
+//     visibility: hidden;
+//   }
+// `;
 
 const OurMarker: React.FC<{
   position: { lat: number; lng: number };
@@ -21,7 +21,7 @@ const OurMarker: React.FC<{
   title: string;
   description: string;
   images?: string[];
-}> = ({ position, number, title, description, images }) => {
+}> = ({ position, number }) => {
   return (
     <Marker
       position={[position.lat, position.lng]}
