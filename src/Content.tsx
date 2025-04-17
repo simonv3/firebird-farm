@@ -1,6 +1,7 @@
 import { css } from "@emotion/css";
 import React from "react";
 import Lightbox from "./Lightbox";
+import Markdown from "react-markdown";
 
 const Content: React.FC<{ shapes: Shape[] }> = ({ shapes }) => {
   return (
@@ -34,7 +35,9 @@ const Content: React.FC<{ shapes: Shape[] }> = ({ shapes }) => {
                 </h2>
 
                 <Lightbox images={shape.images ?? []} />
-                <p>{shape.description}</p>
+                <p>
+                  <Markdown>{shape.description}</Markdown>
+                </p>
               </section>
             );
           })}
